@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth md:scroll-auto">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RISHI-04 Portfolio</title>
+    <link rel="stylesheet" href="output.css">
+    <script src="https://kit.fontawesome.com/a515a97b20.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+</head>
+
+<style>
+    .about-tab {
+        display: flex;
+
+    }
+
+    .tab-links {
+        margin-right: 50px;
+        font-size: 18px;
+        font-weight: 500;
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 8px;
+
+    }
+
+    .tab-links::after {
+        content: '';
+        width: 0;
+        height: 3px;
+        background: rgb(86, 204, 247);
+        position: absolute;
+        left: 0;
+        bottom: -8px;
+        transition: 0.5s;
+    }
+
+    .tab-links.active-link::after {
+        width: 100%;
+    }
+
+    .tab-contents ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+    .tab-contents ul li span {
+        color: #7ccff6;
+        font-size: 15px;
+    }
+
+    .tab-contents {
+        display: none;
+    }
+
+    .tab-contents.about-skills {
+        display: block;
+    }
+</style>
+
+
+
+
+<body>
+
+
+    <!-- Header -->
+
+    <nav class=" md:flex md:justify-between text-black md:bg-blue-300 md:text-white p-2    ">
+        <span class="text-xl font-bold font-serif">RISHI <span class="text-red-500">04</span></span>
+        <span class="text-3xl  justify-end  cursor-pointer mx-2 md:hidden flex  -mt-6">
+            <ion-icon name="menu" onclick="Menu(this)"></ion-icon>
+          </span>
+        
+        <ul class=" menu-links  md:flex  gap-4 mr-12  md:items-center z-[-1] md:z-auto md:static  bg-blue-300  w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ">
+            <li class=" text-lg hover:text-xl hover:text-blue-400 ease-in duration-500"><a href="#HOME">HOME</a></li>
+            <li class=" text-lg hover:text-xl hover:text-blue-400 ease-in duration-500"><a href="#ABOUT">ABOUT</a></li>
+            <li class=" text-lg hover:text-xl hover:text-blue-400 ease-in duration-500"><a href="#SKILLS">SKILLS</a></li>
+            <li class=" text-lg hover:text-xl hover:text-blue-400 ease-in duration-500"><a href="#PROJECTS">PROJECTS</a></li>
+            <li class=" text-lg hover:text-xl hover:text-blue-400 ease-in duration-500"><a href="#CONTACT">CONTACT</a></li>
+            
+        </ul>
+    </nav>
+
+
+    <!--Home-section-->
+
+    <section id="HOME">
+        <div class="container my-10 md:flex  md:flex-raw md:justify-between md:items-center h-fit p-4 ">
+            <div class="left text-center mb-14 md:text-start text-4xl font-semibold md:mx-24">
+                <span class="typing text-blue-300 "></span>
+                <h1 class="headline-1">Hi, I'm <span class="text-blue-400">RISHI</span></h1>
+                <p><span class="headline-2">RAWAT </span>from Agra Uttar Pradesh</p>
+                <h1><span class="headline-1  text-green-400">MERN</span> Stack Developer</h1>
+                <button
+                    class="headline-2 bg-slate-500   rounded-md p-2 text-white mt-6 hover:bg-blue-300 ease-in duration-100">Download
+                    CV</button>
+            </div>
+            <div class=" img-figma ml-20 relative h-screen top-24  ">
+                <div class="yellow-figma">
+                    <img class=" w-96" src="imagespt/shape.png" alt="">
+                </div>
+                <div class="absolute hover:-translate-y-3 hover:-translate-x-3 duration-500 ease-in top-10 ">
+                    <img class=" h-96" src="imagespt/shapeimage.png">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!----About-section-->
+
+    <section id="ABOUT">
+        <div
+            class="about-container flex flex-col md:flex md:flex-row justify-center items-center  md:justify-between p-6">
+
+            <div class="left w-52 mx-8 ">
+                <h1 class="text-xl  mb-1  ">So, who am I?</h1>
+                <hr class="h-.5 w-48 bg-black  mb-4">
+                <p class="font-body">Hi, I RISHI 👋<br> MERN Stack Developer</p>
+                <p class="font-body">A passionate MERN Stack Developer of building responsive website
+                    with tailwind/nodejs/reactjs/react native and some other cool libraries and frameworks....</p>
+                <h1 class="font-body">I want to Explore as much as I 😎</h1>
+
+            </div>
+            <div class="center mx-8 ">
+                <img class=" gif rounded-full w-80 h-80 my-6" src="imagespt/Er.gif" alt="">
+            </div>
+            <div class="right">
+                <div class="aboutme text-black text-xl mx-8">
+                    <h2> Qualification & Skills </h2>
+                    <hr class="h-.5 w-48 bg-black mt-2 ">
+                    <br>
+
+                    <div class="about-tab">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-contents  about-skills" id="skills">
+
+                        <ul>
+                            <li><span>Front End Development</span><br> HTML, CSS, Tilwind css, Javascript, React js</li>
+                            <li><span>MERN Stack</span><br> Still learning </li>
+                            <li><span>Photoshop</span><br>Adove Softwares</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="Projects">
+                        <ul>
+                            <li><span>E-commerce</span><br>Made a E-commerce website</li>
+                            <li><span>College Website</span><br>Made a College website </li>
+                            <li><span>Game</span><br> Made Tic-Toc-Toe</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents " id="Education">
+                        <ul>
+                            <li><span>2023</span><br>Persuing Bachelor in computer science </li>
+                            <li><span>2020</span><br> Higher secondary Education</li>
+                            <li><span>2018</span><br> secondary Education</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!---Project section-->
+
+    <section id="PROJECTS">
+        <div class=" center flex flex-col items-center mt-32 mb-4">
+            <span class="text-xl font-serif text-black">Look at our projects</span>
+            <hr class="h-.5 w-52 mt-2 bg-black  ">
+            <div class="project-btn flex justify-center gap-6">
+                <button class="bg-slate-500 rounded-md p-1 text-white mt-6 hover:bg-blue-300 ease-in w-28">All</button>
+                <button
+                    class="bg-slate-500 rounded-md p-1 text-white mt-6 hover:bg-blue-300 ease-in w-28">Recent</button>
+            </div>
+        </div>
+        <div class="projects-sec flex flex-col  items-center  md:flex-row justify-center gap-16 mt-8">
+
+            <div class="left card-1 rounded-md flex flex-col relative overflow-hidden hover:bg-orange-200 w-52"><img
+                    class="w-screen hover:tr rounded-t-md h-28 mb-4  hover:scale-125 transition duration-500 cursor-pointer absolute"
+                    src="imagespt/tic-tec-toe.png" alt="">
+                <h1 class="p-2 mt-32 ">A responsive Tic-Toe-Toc gamewebsite </h1> <button
+                    class="mt-16 bg-slate-500 w-20 mb-2 p-1 text-white hover:bg-blue-300 rounded-md text-center self-center"><a
+                        href="https://github.com/rishirawat04/TIC-TAC-TOE-Game">Visit</a><i
+                        class="fa-brands fa-github mx-2"></i></button>
+            </div>
+            <div class="right card-1 rounded-md flex flex-col relative overflow-hidden hover:bg-orange-200 w-52"><img
+                    class="w-screen hover:tr rounded-t-md h-28 mb-4  hover:scale-125 transition duration-500 cursor-pointer absolute"
+                    src="imagespt/college (1).png" alt="">
+                <h1 class="p-2 mt-32">Multiple page college website with complete details </h1> <button
+                    class="mt-10 mb-2 bg-slate-500 w-20 p-1 text-white hover:bg-blue-300 rounded-md text-center self-center"><a
+                        href="https://github.com/rishirawat04/College-website">Visit</a><i
+                        class="fa-brands fa-github mx-2"></i></button>
+            </div>
+            <div class="left card-1 rounded-md flex flex-col relative overflow-hidden hover:bg-orange-200 w-52"><img
+                    class="w-screen hover:tr rounded-t-md h-28 mb-4 hover:scale-125 transition duration-500 cursor-pointer absolute "
+                    src="imagespt/utility hub.png" alt="">
+                <h1 class="p-2 mt-32">A Education purpose website full responsive </h1> <button
+                    class="mt-16 mb-2 bg-slate-500 w-20 p-1 text-white hover:bg-blue-300 rounded-md text-center self-center"><a
+                        href="https://github.com/rishirawat04/Hub-Utality">Visit</a><i
+                        class="fa-brands fa-github mx-2"></i></button>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <!-----Contact-section-->
+
+    <section id="CONTACT">
+        <div
+            class="con-container flex flex-col md:flex-row justify-evenly p-4 border-1 bg-slate-900 border-blue-200 mt-16">
+            <div class="left mt-14 md:ml-14 text-center text-white text-xl">
+                <h1 class="sub-title my-5">Contact Me</h1>
+                <h1><i class="fa-regular fa-envelope-open mr-1"></i>rawat390@gmail.com</h1>
+                <p><i class="fa-solid fa-phone my-5 mr-1"></i>8273147793</p>
+
+                <a href="#"
+                    class="bg-slate-500 rounded-md mt-14 p-1 text-white  hover:bg-blue-300 ease-in w-28">Download CV</a>
+            </div>
+            <div class="right  m-auto md:ml-80 md:mr-20 text-white mt-8  ">
+                <form  class="flex flex-col w-80  rounded-md  bg-slate-800  p-2">
+
+                    <input id="name" class="border-b-2 bg-slate-800 rounded-md outline-none " type="text" name="Name" placeholder="Enter Name "
+                        required autocomplete="name">
+                    <input id="email" class="border-b-2  bg-slate-800 my-3 rounded-md outline-none" type="email" name="email"
+                        placeholder="Entet E-mail " required autocomplete="email">
+                    <textarea autocomplete="work" id="contact" class="border-2 outline-none resize-none bg-slate-800 rounded-md " name="Massage" rows="7"
+                        placeholder="Send Your Project Details....."></textarea>
+                    <button type="submit"  onclick="send(); reset(); return false"
+                        class="bg-slate-500 rounded-md p-1 self-center text-white mt-6 hover:bg-blue-300 ease-in w-28 ">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!--Footer-->
+
+    <div class="footer bg-slate-950 p-3">
+        <div class="social-icons  flex gap-6  items-center justify-center my-8 ">
+            <a class="text-white hover:text-blue-300 text-xl "
+                href="https://www.facebook.com/profile.php?id=100037378652624&mibextid=ZbWKwL"><i
+                    class="fa-brands fa-facebook  "></i></a>
+            <a class="text-white hover:text-blue-300 text-xl "
+                href="https://www.linkedin.com/in/rishi-rawat-a6632a251"><i class="fa-brands fa-linkedin"></i></a>
+            <a class="text-white hover:text-blue-300 text-xl " href="https://www.instagram.com/fit_zone_rishi_04/"><i
+                    class="fa-brands fa-instagram"></i></a>
+            <a class="text-white hover:text-blue-300 text-xl "
+                href="https://youtube.com/channel/UC9FkJOGrUS5uxnari8L23_w"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        <div class="copyright  text-white flex gap-6  items-center justify-center mb-2 ">
+            <span>&copy; Copyright 2023 | All Rights Reserved.</span>
+        </div>
+
+        <h1 class="text-white flex gap-6  items-center justify-center mb-8">Terms of Use .Pivacy Policy</h1>
+    </div>
+
+    <!--------------Script-->
+
+    <!-------E-mail-------->
+    <script src=" https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+
+
+
+</script>
+    <!---main script-->
+    
+    <script src="script.js"></script>
+
+
+
+
+   
+
+
+
+</body>
+
+</html>
